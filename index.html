@@ -7,56 +7,64 @@
   <title>Credit Risk & Fraud Detection Dashboard</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
       background-color: #f4f6f8;
       color: #333;
     }
     header {
-      background-color: #002b5c;
+      background-color: #0a2f5c;
       color: white;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    header p {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
     nav {
-      background-color: #004080;
+      background-color: #123d6b;
+      display: flex;
+      justify-content: center;
       padding: 0.5rem;
-      text-align: center;
     }
     nav a {
       color: white;
-      margin: 0 1rem;
       text-decoration: none;
+      margin: 0 1.5rem;
       font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffc107;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
     section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
+      margin-bottom: 2.5rem;
     }
     h2 {
-      color: #002b5c;
+      color: #0a2f5c;
+      font-size: 1.5rem;
     }
-    img {
-      max-width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .image-container img {
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
       margin-top: 1rem;
-    }
-    .caption {
-      font-style: italic;
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-      color: #555;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #002b5c;
-      color: white;
-      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -65,33 +73,37 @@
     <h1>Credit Risk & Fraud Detection Dashboard</h1>
     <p>by Qibin (Roger) Huang</p>
   </header>
+
   <nav>
     <a href="#overview">Overview</a>
     <a href="#heatmap">Fraud Heatmap</a>
     <a href="#metrics">Model Metrics</a>
   </nav>
 
-  <section id="overview">
-    <h2>1. Dashboard Overview</h2>
-    <p>This interactive dashboard summarizes loan and fraud KPIs, credit score segmentation, and geographic DTI ratio for decision-makers.</p>
-    <img src="0CB924DC-142A-436D-9B69-2D103CF53C43.png" alt="Overview Dashboard">
-    <div class="caption">Overview of total loan amounts, average interest rate, and fraud trends. Segmentations by credit score and geography support risk-based decisions.</div>
-  </section>
+  <main>
+    <section id="overview">
+      <h2>1. Dashboard Overview</h2>
+      <p>This interactive dashboard summarizes loan and fraud KPIs, credit score segmentation, and geographic DTI ratio for decision-makers.</p>
+      <div class="image-container">
+        <img src="0CB924DC-142A-436D-9B69-2D103CF53C43.png" alt="Dashboard Overview" />
+      </div>
+    </section>
 
-  <section id="heatmap">
-    <h2>2. Fraud Detection Heatmap</h2>
-    <img src="fraud_heatmap_qibin.png" alt="Fraud Detection Heatmap">
-    <div class="caption">This heatmap highlights regions with elevated fraud risk, helping compliance teams focus investigation resources.</div>
-  </section>
+    <section id="heatmap">
+      <h2>2. Fraud Detection Heatmap</h2>
+      <p>This heatmap helps identify regions with high concentrations of fraud cases, providing visual cues for risk management.</p>
+      <div class="image-container">
+        <img src="fraud_heatmap_qibin.png" alt="Fraud Heatmap" />
+      </div>
+    </section>
 
-  <section id="metrics">
-    <h2>3. Model Evaluation (ROC & Precision-Recall)</h2>
-    <img src="model_performance_qibin.png" alt="Model Performance Metrics">
-    <div class="caption">Illustrates the performance of fraud detection models using AUC and precision-recall metrics, demonstrating transparency and effectiveness of prediction.</div>
-  </section>
-
-  <footer>
-    &copy; 2025 Qibin Huang | Data Science Portfolio | Contact: qibinhuang0702@gmail.com
-  </footer>
+    <section id="metrics">
+      <h2>3. Model Evaluation (ROC & Precision-Recall)</h2>
+      <p>Illustrates the performance of fraud detection models using AUC and precision-recall metrics.</p>
+      <div class="image-container">
+        <img src="model_performance_qibin.png" alt="Model Performance" />
+      </div>
+    </section>
+  </main>
 </body>
 </html>
