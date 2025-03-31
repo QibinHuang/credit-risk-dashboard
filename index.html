@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 2rem;
+      padding: 0;
       background-color: #f5f8fa;
       color: #333;
     }
@@ -17,27 +16,48 @@
       background-color: #002b5c;
       color: white;
       padding: 2rem;
-      border-radius: 0.5rem;
+      text-align: center;
     }
-    h1 {
-      margin: 0 0 0.5rem;
+    nav {
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: #002b5c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
     h2 {
-      margin-top: 2rem;
       color: #002b5c;
-    }
-    p {
-      line-height: 1.6;
-    }
-    .image-container {
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
     img {
       max-width: 100%;
       height: auto;
       border: 1px solid #ccc;
       border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    p.caption {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #555;
       margin-bottom: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #eaeaea;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
@@ -45,30 +65,40 @@
   <header>
     <h1>Credit Risk Analysis and Fraud Detection Dashboard</h1>
     <p>
-      This interactive dashboard project demonstrates how financial institutions can use data-driven analytics to improve credit risk assessment and fraud detection.
-      Built with <strong>Power BI</strong>, <strong>SQL</strong>, and <strong>Python</strong>, the project simulates over 2 million customer credit records to provide actionable insights.
+      Built with <strong>Power BI</strong>, <strong>SQL</strong>, and <strong>Python</strong>.<br>
+      Simulated 2M+ credit records for risk scoring, fraud detection, and insight visualization.
     </p>
   </header>
 
-  <section>
-    <h2>Project Overview</h2>
-    <p>
-      Using machine learning models (Random Forest, XGBoost), the system predicts credit risk scores, detects fraudulent activities, and reduces false positives. The dashboard visualizes trends across credit scores, loan amounts, fraud patterns, and regional risk.
-    </p>
-    <p>
-      The solution also includes model performance evaluation using ROC and precision-recall metrics, offering transparency into fraud prediction capabilities.
-    </p>
-  </section>
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#heatmap">Fraud Heatmap</a>
+    <a href="#metrics">Model Metrics</a>
+  </nav>
 
-  <section class="image-container">
-    <h2>1. Overview Dashboard</h2>
-    <img src="0CB924DC-142A-436D-9B69-2D103CF53C43.png" alt="Overview Dashboard" />
+  <main>
+    <section id="overview">
+      <h2>1. Overview Dashboard</h2>
+      <img src="0CB924DC-142A-436D-9B69-2D103CF53C43.png" alt="Overview Dashboard" />
+      <p class="caption">Visualizes total loan volume, fraud case count, average interest rate, and risk breakdown by credit score group.</p>
+    </section>
 
-    <h2>2. Fraud Detection Heatmap</h2>
-    <img src="fraud_heatmap_qibin.png" alt="Fraud Heatmap" />
+    <section id="heatmap">
+      <h2>2. Fraud Detection Heatmap</h2>
+      <img src="fraud_heatmap_qibin.png" alt="Fraud Heatmap" />
+      <p class="caption">Heatmap shows geographic fraud density and risk level by state, highlighting regional anomalies.</p>
+    </section>
 
-    <h2>3. Model Performance (ROC & Precision-Recall)</h2>
-    <img src="model_performance_qibin.png" alt="Model Performance" />
-  </section>
+    <section id="metrics">
+      <h2>3. Model Performance (ROC & Precision-Recall)</h2>
+      <img src="model_performance_qibin.png" alt="Model Metrics" />
+      <p class="caption">Model comparison using AUC and precision-recall, with Random Forest and XGBoost achieving top fraud detection performance.</p>
+    </section>
+  </main>
+
+  <footer>
+    Project by Qibin (Roger) Huang | Data Science @ George Washington University<br>
+    Contact: qibinhuang0702@gmail.com
+  </footer>
 </body>
 </html>
