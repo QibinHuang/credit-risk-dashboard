@@ -1,70 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Credit Risk & Fraud Detection Dashboard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50 text-gray-800">
-    <!-- Header -->
-    <header class="bg-blue-900 text-white p-6 shadow-md">
-      <div class="max-w-6xl mx-auto text-center">
-        <h1 class="text-3xl font-bold">Credit Risk & Fraud Detection Dashboard</h1>
-        <p class="mt-2 text-sm font-light">by Qibin (Roger) Huang</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credit Risk & Fraud Detection Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1565511058450-08ca5b3c206b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .badge-group span {
+      margin: 0.2rem;
+    }
+    .tab-content img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    .cta-buttons a {
+      margin: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="display-5 fw-bold">Credit Risk & Fraud Detection Dashboard</h1>
+      <p class="lead">A Power BI-powered dashboard using real-world financial data</p>
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-warning">Download PDF Summary</a>
+        <a href="#" class="btn btn-outline-light">View in Power BI</a>
+        <a href="#" class="btn btn-primary">Contact Me</a>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <!-- Navigation -->
-    <nav class="bg-blue-700 text-white shadow">
-      <div class="max-w-6xl mx-auto flex space-x-8 justify-center text-sm font-semibold p-3">
-        <a href="#overview" class="hover:underline">Overview</a>
-        <a href="#heatmap" class="hover:underline">Fraud Heatmap</a>
-        <a href="#metrics" class="hover:underline">Model Metrics</a>
+  <!-- Tech Stack Badges -->
+  <div class="container py-4 text-center">
+    <h4 class="mb-3">Built With</h4>
+    <div class="badge-group">
+      <span class="badge bg-primary">Power BI</span>
+      <span class="badge bg-secondary">Python</span>
+      <span class="badge bg-success">SQL</span>
+      <span class="badge bg-info text-dark">Scikit-learn</span>
+      <span class="badge bg-dark">Pandas</span>
+    </div>
+  </div>
+
+  <!-- Tabbed Dashboard Content -->
+  <div class="container">
+    <ul class="nav nav-tabs" id="dashboardTabs" role="tablist">
+      <li class="nav-item"><a class="nav-link active" id="overview-tab" data-bs-toggle="tab" href="#overview" role="tab">Overview</a></li>
+      <li class="nav-item"><a class="nav-link" id="heatmap-tab" data-bs-toggle="tab" href="#heatmap" role="tab">Fraud Heatmap</a></li>
+      <li class="nav-item"><a class="nav-link" id="metrics-tab" data-bs-toggle="tab" href="#metrics" role="tab">Model Metrics</a></li>
+    </ul>
+    <div class="tab-content p-4 bg-white rounded-bottom border">
+      <div class="tab-pane fade show active" id="overview" role="tabpanel">
+        <img src="0CB924DC-142A-436D-9B69-2D103CF53C43.png" alt="Overview Dashboard">
       </div>
-    </nav>
+      <div class="tab-pane fade" id="heatmap" role="tabpanel">
+        <img src="fraud_heatmap_qibin.png" alt="Fraud Heatmap">
+      </div>
+      <div class="tab-pane fade" id="metrics" role="tabpanel">
+        <img src="model_performance_qibin.png" alt="Model Performance">
+      </div>
+    </div>
+  </div>
 
-    <!-- Body -->
-    <main class="max-w-6xl mx-auto px-4 py-8">
-      <!-- Introduction -->
-      <section class="mb-10">
-        <h2 class="text-xl font-semibold text-blue-800 mb-2">Project Summary</h2>
-        <p class="text-sm leading-relaxed">
-          This Power BI dashboard simulates over 2 million customer credit records to demonstrate how financial institutions can apply data-driven solutions for credit risk assessment and fraud detection.
-          Built using <strong>SQL</strong>, <strong>Python</strong>, and <strong>Power BI</strong>, the project combines machine learning models (Random Forest, XGBoost) with interactive data visualizations.
-        </p>
-      </section>
+  <!-- Project Summary Link -->
+  <div class="text-center mt-5">
+    <a href="project-summary.html" class="btn btn-outline-secondary">Project Summary</a>
+  </div>
 
-      <!-- Dashboard Overview -->
-      <section id="overview" class="mb-12">
-        <h3 class="text-lg font-semibold text-blue-700 mb-4">1. Overview Dashboard</h3>
-        <img src="0CB924DC-142A-436D-9B69-2D103CF53C43.png" alt="Dashboard Overview" class="rounded-lg shadow-md border border-gray-200" />
-      </section>
+  <!-- Footer -->
+  <footer class="text-center py-4 mt-5 text-muted">
+    &copy; 2025 Qibin (Roger) Huang. All rights reserved.
+  </footer>
 
-      <!-- Heatmap -->
-      <section id="heatmap" class="mb-12">
-        <h3 class="text-lg font-semibold text-blue-700 mb-4">2. Fraud Detection Heatmap</h3>
-        <img src="fraud_heatmap_qibin.png" alt="Fraud Heatmap" class="rounded-lg shadow-md border border-gray-200" />
-      </section>
-
-      <!-- Model Performance -->
-      <section id="metrics">
-        <h3 class="text-lg font-semibold text-blue-700 mb-4">3. Model Performance Metrics (ROC & Precision-Recall)</h3>
-        <img src="model_performance_qibin.png" alt="Model Metrics" class="rounded-lg shadow-md border border-gray-200" />
-      </section>
-
-      <!-- Footer -->
-      <footer class="text-center text-sm text-gray-400 mt-16 border-t pt-4">
-        &copy; 2025 Qibin Huang. All Rights Reserved. | Contact: qibinhuang1999@gmail.com
-      </footer>
-    </main>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
