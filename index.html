@@ -2,51 +2,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Credit Risk Analysis Dashboard - Qibin Huang</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credit Risk Analysis and Fraud Detection</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f9fc; }
-    header { background-color: #003366; color: white; padding: 20px; text-align: center; }
-    nav { display: flex; justify-content: center; background: #eee; padding: 10px 0; }
-    nav a { margin: 0 15px; text-decoration: none; color: #003366; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
-    .section { margin-bottom: 60px; }
-    h2 { color: #003366; }
-    img { width: 100%; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-top: 10px; }
-    footer { text-align: center; font-size: 0.9em; padding: 20px; background: #003366; color: white; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f5f8fa;
+      color: #333;
+    }
+    header {
+      background-color: #002b5c;
+      color: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+    h1 {
+      margin: 0 0 0.5rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #002b5c;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .image-container {
+      margin-top: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 2rem;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Credit Risk & Fraud Detection Dashboard</h1>
-    <p>by Qibin (Roger) Huang</p>
+    <h1>Credit Risk Analysis and Fraud Detection Dashboard</h1>
+    <p>
+      This interactive dashboard project demonstrates how financial institutions can use data-driven analytics to improve credit risk assessment and fraud detection.
+      Built with <strong>Power BI</strong>, <strong>SQL</strong>, and <strong>Python</strong>, the project simulates over 2 million customer credit records to provide actionable insights.
+    </p>
   </header>
-  <nav>
-    <a href="#overview">Overview</a>
-    <a href="#heatmap">Fraud Heatmap</a>
-    <a href="#model">Model Metrics</a>
-  </nav>
-  <div class="container">
-    <div class="section" id="overview">
-      <h2>1. Dashboard Overview</h2>
-      <p>This interactive dashboard summarizes loan and fraud KPIs, credit score segmentation, and geographic DTI ratio for decision-makers.</p>
-      <img src="0CB924DC-142A-436D-9B69-2D103CF53C43.png" alt="Overview Dashboard">
-    </div>
-    <div class="section" id="heatmap">
-      <h2>2. Fraud Probability Heatmap</h2>
-      <p>Shows average fraud probability across customer segments and regions to help identify high-risk areas.</p>
-      <img src="fraud_heatmap_qibin.png" alt="Fraud Heatmap">
-    </div>
-    <div class="section" id="model">
-      <h2>3. Model Evaluation (ROC & Precision-Recall)</h2>
-      <p>Illustrates the performance of fraud detection models using AUC and precision-recall metrics.</p>
-      <img src="model_performance_qibin.png" alt="Model Metrics">
-    </div>
-  </div>
-  <footer>
-    &copy; 2025 Qibin Huang | Portfolio Project | Email: qibinhuang0702@gmail.com
-  </footer>
+
+  <section>
+    <h2>Project Overview</h2>
+    <p>
+      Using machine learning models (Random Forest, XGBoost), the system predicts credit risk scores, detects fraudulent activities, and reduces false positives. The dashboard visualizes trends across credit scores, loan amounts, fraud patterns, and regional risk.
+    </p>
+    <p>
+      The solution also includes model performance evaluation using ROC and precision-recall metrics, offering transparency into fraud prediction capabilities.
+    </p>
+  </section>
+
+  <section class="image-container">
+    <h2>1. Overview Dashboard</h2>
+    <img src="0CB924DC-142A-436D-9B69-2D103CF53C43.png" alt="Overview Dashboard" />
+
+    <h2>2. Fraud Detection Heatmap</h2>
+    <img src="fraud_heatmap_qibin.png" alt="Fraud Heatmap" />
+
+    <h2>3. Model Performance (ROC & Precision-Recall)</h2>
+    <img src="model_performance_qibin.png" alt="Model Performance" />
+  </section>
 </body>
 </html>
